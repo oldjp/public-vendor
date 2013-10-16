@@ -9,7 +9,8 @@
         "silex/silex":                  "1.0.*"
     },
     "require-dev":{
-        "twitter/bootstrap": "dev-navbar-button-docs"
+        "twitter/bootstrap": "dev-navbar-button-docs",
+        "components/jquery": "dev-master"
     },
     "autoload":{
         "psr-0":{

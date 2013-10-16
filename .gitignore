@@ -3,3 +3,6 @@ tmp
 vendor
 composer.lock
 composer.phar
+.tmp
+tests/grunt/fixtures/dest
+components

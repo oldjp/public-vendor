@@ -9,7 +9,6 @@ class ServiceProvider implements ServiceProviderInterface
 {
 	public function register(Application $app)
 	{
-		$app['public-vendor._default_'] = 'application/octet-stream';
 		$app['public-vendor.css'] 		= 'text/css';
 		$app['public-vendor.js'] 		= 'application/javascript';
 		$app['public-vendor.html']		= 'text/html';
@@ -28,11 +27,14 @@ class ServiceProvider implements ServiceProviderInterface
 		});
 
 		$app['public-vendor.response'] 	= $app->protect(function($file) use ($app){
-			if(!file_exists($file)){
+			
+			$name = 'public-vendor.'.strtolower(pathinfo($file, PATHINFO_EXTENSION));
+
+			if(!file_exists($file) || !isset($app[$name])){
 				$app->abort(404, "Not found");
 			}
-			$name = 'public-vendor.'.strtolower(pathinfo($file, PATHINFO_EXTENSION));
-			return $app->sendFile($file, 200, array('Content-type' => isset($app[$name]) ? $app[$name] : $app['public-vendor._default_']));
+
+			return $app->sendFile($file, 200, array('Content-type' => $app[$name]);
 		});
 	}
 
