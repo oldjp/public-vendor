@@ -34,7 +34,7 @@ class ServiceProvider implements ServiceProviderInterface
 				$app->abort(404, "Not found");
 			}
 
-			return $app->sendFile($file, 200, array('Content-type' => $app[$name]);
+			return $app->sendFile($file, 200, array('Content-type' => $app[$name]));
 		});
 	}
 
