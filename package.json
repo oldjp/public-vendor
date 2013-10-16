@@ -10,7 +10,8 @@
         "grunt-contrib-cssmin": "0.4.x",
         "grunt-contrib-clean": "0.4.x",
         "grunt-usemin": "2.x.x",
-        "matchdep": "0.1.x"
+        "matchdep": "0.1.x",
+        "grunt-mocha":"0.4.x"
     },
     "engines": {
         "node": ">=0.10"
