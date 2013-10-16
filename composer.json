@@ -1,6 +1,6 @@
 {
     "name": "johnpitcher/public-vendor",
-    "description": "Silex provider and grunt plugin for dealing with static assets in composer's vendor directory",
+    "description": "Silex provider and grunt task for dealing with static assets in composer's vendor directory",
     "homepage":"https://github.com/johnpitcher/public-vendor",
     "license": "MIT",
     "type": "library",
