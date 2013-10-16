@@ -1,0 +1,17 @@
+{
+    "name": "public-vendor",
+    "version": "0.0.1",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "0.4.x",
+        "grunt-contrib-concat": "0.1.x",
+        "grunt-contrib-uglify": "0.2.x",
+        "grunt-contrib-compass": "0.1.x",
+        "grunt-contrib-cssmin": "0.4.x",
+        "grunt-usemin": "2.x.x",
+        "matchdep": "0.1.x"
+    },
+    "engines": {
+        "node": ">=0.10"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "johnpitcher/public-vendor",
+    "description": "Silex skeleton",
+    "homepage":"https://github.com/johnpitcher/public-vendor",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php":                          ">=5.3.3",
+        "silex/silex":                  "1.0.*"
+    },
+    "require-dev":{
+        "twitter/bootstrap": "dev-navbar-button-docs"
+    },
+    "autoload":{
+        "psr-0":{
+            "PublicVendor":"src"
+        }
+    },
+    "minimum-stability": "dev"
+}
