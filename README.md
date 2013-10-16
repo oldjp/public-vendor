@@ -71,7 +71,7 @@ will make this path available:
 <script src="/vendor/author/package/js/file.js"></script>
 ```
 
-# Grunt Task
+# Grunt Task:
 
 If you are using `usemin` task you can add `publicVendor` task before `useminPrepare`. It's important to setup `gruntfile.js` in the same directory as composer's `vendor` directory. For example:
 
