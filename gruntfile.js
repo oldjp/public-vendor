@@ -28,7 +28,14 @@ module.exports = function (grunt) {
                 dest: 'tests/grunt/fixtures/dest'
             }
         },
-
+        mochaTest:{
+            test: {
+                options: {
+                    reporter: 'list'
+                },
+                src: ['tests/grunt/*-test.js']
+            }
+        }
     });
 
     grunt.registerTask('resumeTestBuild', 'Checks if specified in test html file assets were created', function(){
@@ -45,6 +52,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('test-build', [
+        'mochaTest',
         'clean',
         'publicVendor',
         'useminPrepare',

@@ -11,7 +11,7 @@
         "grunt-contrib-clean": "0.4.x",
         "grunt-usemin": "2.x.x",
         "matchdep": "0.1.x",
-        "grunt-mocha":"0.4.x"
+        "grunt-mocha-test":"0.7.x"
     },
     "engines": {
         "node": ">=0.10"

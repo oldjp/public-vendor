@@ -18,18 +18,19 @@ exports.createConfig = function(context, block){
             src: []
         };
 
+        	
     context.inFiles.forEach(function(file) {
         var source = path.join(context.inDir, file);
-        
+
         if(/^\/vendor/.test(file) && !grunt.file.exists(source)){
-                            
+
             var elements = file.split(path.sep),
             	vendor = '',
             	pathfile = '';
 
             while('vendor' != elements.shift());
                             
-            vendor = elements.shift(), pathfile;
+            vendor = elements.shift();
             
             if(typeof options.aliases[vendor] != 'undefined'){
                 vendor = options.aliases[vendor];
@@ -53,7 +54,6 @@ exports.createConfig = function(context, block){
         returns.src.push(file);                                    
     });
 
-    console.log(returns);
     context.outFiles = [block.dest];
     return {files:[returns]};
 }
